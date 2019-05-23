@@ -1,0 +1,9 @@
+*.ai
+*.log
+*.pdf
+*.psd
+node_modules/
+npm-debug.*
+source/css/*.css
+Thumbs.db
+preview/

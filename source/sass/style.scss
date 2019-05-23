@@ -1,0 +1,63 @@
+@import "normalize";
+
+// @import "variables";
+// Файл variables.scss
+
+// @import "global";
+// Файл global.scss
+
+@font-face {
+  font-family: 'proxima_novaregular_condensed';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('mark_simonson_-_proxima_nova_condensed_regular-webfont.woff2') format('woff2'),
+  url('mark_simonson_-_proxima_nova_condensed_regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'proxima_novaSBdCn';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('mark_simonson_-_proxima_nova_condensed_semibold-webfont.woff2') format('woff2'),
+  url('mark_simonson_-_proxima_nova_condensed_semibold-webfont.woff') format('woff');
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+
+  font-size: 18px;
+  line-height: 27px;
+  font-family: "proxima_novaregular_condensed", "Arial", sans-serif;
+  font-weight: normal;
+  color: #f7f4f1;
+  font-style: normal;
+
+  background-color: $bg-darkgrey;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
