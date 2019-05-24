@@ -3,6 +3,12 @@
 // @import "variables";
 // Файл variables.scss
 
+$blue: #327FBE;
+$green: #6AAF44;
+$orange: #F15A29;
+$red: #D31E47;
+$white: #FFFFFF;
+
 // @import "global";
 // Файл global.scss
 
@@ -33,10 +39,10 @@ body {
   line-height: 27px;
   font-family: "proxima_novaregular_condensed", "Arial", sans-serif;
   font-weight: normal;
-  color: #f7f4f1;
+  color: $blue;
   font-style: normal;
 
-  background-color: $bg-darkgrey;
+  background-color: $white;
 }
 
 img {
