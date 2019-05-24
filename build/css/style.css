@@ -496,7 +496,7 @@ input[type="radio"].visually-hidden {
 .block__speed__wrapper {
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  align-items: flex-start;
   justify-content: space-between; }
 
 .block__speed, .block__chanel {
