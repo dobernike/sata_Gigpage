@@ -400,80 +400,23 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-direction: column;
   background: white;
-  width: 300px; }
-  .block--premium {
-    position: relative; }
-    .block--premium::after {
-      content: "премиум";
-      color: white;
-      font-weight: bold;
-      font-size: 0.6rem;
-      text-align: center;
-      position: absolute;
-      left: 1.5rem;
-      top: -1.2rem;
-      min-height: 1.2rem;
-      min-width: 3.6rem;
-      border-top-left-radius: 0.3rem;
-      border-top-right-radius: 0.3rem;
-      z-index: -1;
-      background: linear-gradient(to top, #f16033, #f36035); }
-  .block .block__general-wrapper {
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
-    z-index: 1; }
-  .block .block__wrapper {
-    padding: 0 1rem; }
-  .block--profit {
-    position: relative; }
-    .block--profit::after {
-      content: "выгодно";
-      color: white;
-      font-weight: bold;
-      font-size: 0.6rem;
-      text-align: center;
-      position: absolute;
-      left: 1.5rem;
-      top: -1.2rem;
-      min-height: 1.2rem;
-      min-width: 3.6rem;
-      border-top-left-radius: 0.3rem;
-      border-top-right-radius: 0.3rem;
-      z-index: -1;
-      background: linear-gradient(to top, #ef4d40, #f36035); }
-  .block--popularly {
-    position: relative; }
-    .block--popularly::after {
-      content: "популярно";
-      color: white;
-      font-weight: bold;
-      font-size: 0.6rem;
-      text-align: center;
-      position: absolute;
-      left: 1.5rem;
-      top: -1.2rem;
-      min-height: 1.2rem;
-      min-width: 3.6rem;
-      border-top-left-radius: 0.3rem;
-      border-top-right-radius: 0.3rem;
-      z-index: -1;
-      background: linear-gradient(to top, #ef4d40, #f36035); }
-  .block--power {
-    position: relative; }
-    .block--power::after {
-      content: "мощный";
-      color: white;
-      font-weight: bold;
-      font-size: 0.6rem;
-      text-align: center;
-      position: absolute;
-      left: 1.5rem;
-      top: -1.2rem;
-      min-height: 1.2rem;
-      min-width: 3.6rem;
-      border-top-left-radius: 0.3rem;
-      border-top-right-radius: 0.3rem;
-      z-index: -1;
-      background: linear-gradient(to top, #ef4d40, #f36035); }
+  width: 300px;
+  position: relative; }
+  .block--premium::after {
+    content: "премиум";
+    color: white;
+    font-weight: bold;
+    font-size: 0.6rem;
+    text-align: center;
+    position: absolute;
+    left: 1.5rem;
+    top: -1.2rem;
+    min-height: 1.2rem;
+    min-width: 3.6rem;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    z-index: -1;
+    background: linear-gradient(to top, #f16033, #f36035); }
 
 .block h3 {
   margin: 0;
@@ -484,6 +427,13 @@ input[type="radio"].visually-hidden {
   font-size: 1.6rem;
   font-weight: 600;
   border-bottom: 1px solid #a7a9ac; }
+
+.block__general-wrapper {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  z-index: 1; }
+
+.block__wrapper {
+  padding: 0 1rem; }
 
 .block__speed__wrapper {
   margin-bottom: 0.5rem;
@@ -625,4 +575,5 @@ input[type="radio"].visually-hidden {
   padding: 1rem;
   color: black;
   font-size: 0.6rem;
-  background-color: #ebebec; }
+  background-color: #ebebec;
+  z-index: -2; }
