@@ -373,7 +373,8 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
   text-decoration: none; }
 
-.link:hover {
+.link:hover,
+.link:focus {
   text-decoration: underline; }
 
 .all-in-one {
@@ -517,6 +518,7 @@ input[type="radio"].visually-hidden {
   width: 1.8rem;
   font-size: 0.7rem;
   color: grey;
+  cursor: auto;
   border-bottom: 8px solid grey; }
   .block__btn-speed--x1 {
     color: #327fbe;
@@ -530,6 +532,8 @@ input[type="radio"].visually-hidden {
   .block__btn-speed--x10 {
     color: #d31e47;
     border-color: #d31e47; }
+  .block__btn-speed--x1, .block__btn-speed--x3, .block__btn-speed--x5, .block__btn-speed--x10 {
+    cursor: pointer; }
 
 .block__btn-speed span {
   font-size: 1rem; }
@@ -554,10 +558,20 @@ input[type="radio"].visually-hidden {
     background-position: center; }
   .block__icon--tv::before {
     background-image: url(../img/svg/tv-box-icon.svg); }
+  .block__icon--tv:hover::before, .block__icon--tv:focus::before {
+    background-image: url(../img/svg/tv-box-icon-blue.svg); }
   .block__icon--router-1g::before {
     background-image: url(../img/svg/router-1gb-icon.svg); }
+  .block__icon--router-1g:hover::before, .block__icon--router-1g:focus::before {
+    background-image: url(../img/svg/router-1gb-icon-blue.svg); }
+  .block__icon--router-100mb::before {
+    background-image: url(../img/svg/router-100mb-icon.svg); }
+  .block__icon--router-100mb:hover::before, .block__icon--router-100mb:hover::before {
+    background-image: url(../img/svg/router-100mb-icon-blue.svg); }
   .block__icon--ip::before {
     background-image: url(../img/svg/ip-icon.svg); }
+  .block__icon--ip:hover::before, .block__icon--ip:focus::before {
+    background-image: url(../img/svg/ip-icon-blue.svg); }
 
 .block__icon__benefit {
   padding: 0; }
@@ -587,9 +601,10 @@ input[type="radio"].visually-hidden {
   .block__points::before {
     content: "";
     position: absolute;
-    left: 0.8rem;
-    width: 1.3rem;
-    min-height: 1.2rem;
+    top: 0.6rem;
+    left: 1rem;
+    width: 1.2rem;
+    min-height: 1.03rem;
     background-repeat: no-repeat;
     background-position: center; }
 
@@ -600,10 +615,17 @@ input[type="radio"].visually-hidden {
     background-image: url(../img/svg/wallet-icon.svg); }
 
 .block__points {
+  cursor: pointer;
   color: #58595b;
   background-color: #ededee; }
   .block__points::before {
-    background-image: url(../img/svg/pig-icon.svg); }
+    background-color: #000;
+    -webkit-mask-image: url(../img/svg/pig-icon.svg);
+            mask-image: url(../img/svg/pig-icon.svg); }
+  .block__points:hover, .block__points:focus {
+    color: #327fbe; }
+  .block__points:hover::before, .block__points:focus::before {
+    background-color: #327fbe; }
 
 .block__description {
   margin: 0;
@@ -612,3 +634,47 @@ input[type="radio"].visually-hidden {
   color: black;
   font-size: 0.6rem;
   background-color: #ebebec; }
+
+.speed-up {
+  width: 320px;
+  margin: 0 auto; }
+
+.speed-up h2 {
+  margin: 0;
+  margin-bottom: 2rem;
+  text-align: center; }
+
+.speed-up__wrapper {
+  overflow-x: auto;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3); }
+
+.speed-up__table tr {
+  display: flex; }
+
+.speed-up__table th,
+.speed-up__table td {
+  box-sizing: border-box;
+  width: 320px;
+  text-align: center; }
+
+.speed-up__label {
+  padding: 0.5rem 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+  border-bottom: 0.4rem solid grey; }
+  .speed-up__label--100mb {
+    color: #327fbe;
+    border-color: #327fbe; }
+  .speed-up__label--300mb {
+    color: #6aaf44;
+    border-color: #6aaf44; }
+  .speed-up__label--500mb {
+    color: #f15a29;
+    border-color: #f15a29; }
+  .speed-up__label--1000mb {
+    color: #d31e47;
+    border-color: #d31e47; }
+
+.speed-up__description {
+  color: black;
+  font-size: 1rem; }

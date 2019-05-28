@@ -108,7 +108,8 @@ input[type="radio"].visually-hidden {
   text-decoration: none;
 }
 
-.link:hover {
+.link:hover,
+.link:focus {
   text-decoration: underline;
 }
 
@@ -316,6 +317,8 @@ input[type="radio"].visually-hidden {
   font-size: 0.7rem;
   color: grey;
 
+  cursor: auto;
+
   border-bottom: 8px solid grey;
 
   &--x1 {
@@ -336,6 +339,13 @@ input[type="radio"].visually-hidden {
   &--x10 {
     color: $red;
     border-color: $red;
+  }
+
+  &--x1,
+  &--x3,
+  &--x5,
+  &--x10 {
+    cursor: pointer;
   }
 }
 
@@ -376,12 +386,36 @@ input[type="radio"].visually-hidden {
     background-image: url(../img/svg/tv-box-icon.svg);
   }
 
+  &--tv:hover::before,
+  &--tv:focus::before {
+    background-image: url(../img/svg/tv-box-icon-blue.svg);
+  }
+
   &--router-1g::before {
     background-image: url(../img/svg/router-1gb-icon.svg);
   }
 
+  &--router-1g:hover::before,
+  &--router-1g:focus::before {
+    background-image: url(../img/svg/router-1gb-icon-blue.svg);
+  }
+
+  &--router-100mb::before {
+    background-image: url(../img/svg/router-100mb-icon.svg);
+  }
+
+  &--router-100mb:hover::before,
+  &--router-100mb:hover::before {
+    background-image: url(../img/svg/router-100mb-icon-blue.svg);
+  }
+
   &--ip::before {
     background-image: url(../img/svg/ip-icon.svg);
+  }
+
+  &--ip:hover::before,
+  &--ip:focus::before {
+    background-image: url(../img/svg/ip-icon-blue.svg);
   }
 }
 
@@ -424,10 +458,11 @@ input[type="radio"].visually-hidden {
     content: "";
 
     position: absolute;
-    left: 0.8rem;
+    top: 0.6rem;
+    left: 1rem;
 
-    width: 1.3rem;
-    min-height: 1.2rem;
+    width: 1.2rem;
+    min-height: 1.03rem;
 
     background-repeat: no-repeat;
     background-position: center;
@@ -445,12 +480,28 @@ input[type="radio"].visually-hidden {
 }
 
 .block__points {
+  cursor: pointer;
+
   color: #58595b;
 
   background-color: #ededee;
 
   &::before {
-    background-image: url(../img/svg/pig-icon.svg);
+    background-color: #000;
+    mask-image: url(../img/svg/pig-icon.svg);
+    // background-image: url(../img/svg/pig-icon.svg);
+  }
+
+  &:hover,
+  &:focus {
+    color: $blue;
+    // text-decoration: underline;
+    // box-shadow: 0 -1px 0 0 inset;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-color: $blue;
   }
 }
 
@@ -464,4 +515,73 @@ input[type="radio"].visually-hidden {
 
   background-color: #ebebec;
   // z-index: -1;
+}
+
+.speed-up {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.speed-up h2 {
+  margin: 0;
+  margin-bottom: 2rem;
+
+  text-align: center;
+}
+
+.speed-up__wrapper {
+  overflow-x: auto;
+
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.speed-up__table {
+  // width: 320px;
+}
+
+.speed-up__table tr {
+  display: flex;
+}
+.speed-up__table th, 
+.speed-up__table td {
+  box-sizing: border-box;
+  //  display: flex;
+  width: 320px;
+
+  text-align: center;
+  // padding: 1rem 320px;
+}
+
+.speed-up__label {
+  padding: 0.5rem 0;
+
+  font-weight: 600;
+  font-size: 1.5rem;
+
+  border-bottom: 0.4rem solid grey; 
+
+  &--100mb {
+    color: $blue;
+    border-color: $blue;
+  }
+
+  &--300mb {
+    color: $green;
+    border-color: $green;
+  }
+
+  &--500mb {
+    color: $orange;
+    border-color: $orange;
+  }
+
+  &--1000mb {
+    color: $red;
+    border-color: $red;
+  }
+}
+
+.speed-up__description {
+  color: black;
+  font-size: 1rem;
 }
