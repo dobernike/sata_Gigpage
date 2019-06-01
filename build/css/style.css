@@ -381,13 +381,12 @@ input[type="radio"].visually-hidden {
   width: 320px;
   margin: 0 auto;
   padding-top: 2rem; }
-
-.all-in-one h2 {
-  margin: 0;
-  margin-bottom: 0.5rem;
-  text-align: center;
-  font-weight: 600;
-  font-size: 1.7rem; }
+  .all-in-one h2 {
+    margin: 0;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.7rem; }
 
 .all-in-one__slogan {
   margin: 0;
@@ -636,8 +635,8 @@ input[type="radio"].visually-hidden {
   background-color: #ebebec; }
 
 .speed-up {
-  width: 320px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 300px; }
 
 .speed-up h2 {
   margin: 0;
@@ -646,14 +645,17 @@ input[type="radio"].visually-hidden {
 
 .speed-up__wrapper {
   overflow-x: auto;
+  margin-bottom: 3rem;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3); }
 
 .speed-up__table {
-  border-collapse: collapse; }
+  border-collapse: collapse;
+  width: 600px; }
 
 .speed-up__table th,
 .speed-up__table td {
   width: 160px;
+  height: 40px;
   border-right: 2px solid #e2e3e4;
   text-align: center; }
   .speed-up__table th:last-child,
@@ -662,8 +664,9 @@ input[type="radio"].visually-hidden {
 
 .speed-up__label {
   font-weight: 600;
-  font-size: 1.5rem;
-  border-bottom: 10px solid #000; }
+  font-size: 1rem;
+  border-bottom: 0.4rem solid grey;
+  margin-right: 0.4rem; }
   .speed-up__label--100mb {
     color: #327fbe;
     border-color: #327fbe; }
@@ -676,6 +679,8 @@ input[type="radio"].visually-hidden {
   .speed-up__label--1000mb {
     color: #d31e47;
     border-color: #d31e47; }
+  .speed-up__label span {
+    font-size: 1.5rem; }
 
 td.speed-up__description {
   align-self: center;
@@ -683,8 +688,37 @@ td.speed-up__description {
   font-size: 0.5rem;
   line-height: 0.7rem; }
 
-.speed-up__total {
+.speed-up__total,
+.speed-up__points {
+  position: relative;
   font-size: 0.9rem; }
+  .speed-up__total span,
+  .speed-up__points span {
+    font-weight: 600; }
+  .speed-up__total::before,
+  .speed-up__points::before {
+    content: "";
+    position: absolute;
+    top: 0.7rem;
+    left: 1.5rem;
+    width: 1rem;
+    background-repeat: no-repeat;
+    background-position: center; }
+
+.speed-up__total {
+  padding-left: 2rem; }
+
+.speed-up__total::before {
+  min-height: 1rem;
+  background-color: #327fbe;
+  -webkit-mask-image: url(../img/svg/wallet-icon.svg);
+          mask-image: url(../img/svg/wallet-icon.svg); }
+
+.speed-up__points::before {
+  min-height: 0.85rem;
+  background-color: gray;
+  -webkit-mask-image: url(../img/svg/pig-icon.svg);
+          mask-image: url(../img/svg/pig-icon.svg); }
 
 .speed-up__points {
   font-size: 0.6rem;
@@ -696,3 +730,74 @@ td.speed-up__description {
 
 .speed-up__points span {
   font-size: 1rem; }
+
+.longer-cheaper h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center; }
+
+.longer-cheaper__slogan {
+  margin: 0;
+  text-align: center; }
+
+.longer-cheaper__aside {
+  position: relative; }
+
+.longer-cheaper__wrapper {
+  display: flex;
+  margin: 0 auto;
+  width: 300px; }
+
+.aside-table,
+.longer-cheaper__tarifs {
+  border-collapse: collapse; }
+
+.aside-table span,
+.aside-table__speed {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  text-align: center; }
+
+.aside-table__speed {
+  margin: 0; }
+
+.aside-table th,
+.longer-cheaper__tarifs th {
+  height: 3rem;
+  background-color: #ededee; }
+
+.longer-cheaper__tarifs th {
+  border-right: 2px solid #e2e3e4; }
+
+.longer-cheaper__tarifs th:last-child {
+  border: none; }
+
+.aside-table td,
+.longer-cheaper__tarifs td {
+  height: 150px; }
+
+.longer-cheaper__tarifs {
+  width: 555px; }
+
+.aside-table__tarif {
+  border-right: 8px solid black;
+  margin-right: 8px; }
+  .aside-table__tarif--100 {
+    border-color: #327fbe; }
+  .aside-table__tarif--300 {
+    border-color: #6aaf44; }
+  .aside-table__tarif--500 {
+    border-color: #f15a29; }
+  .aside-table__tarif--1000 {
+    border-color: #d31e47; }
+
+.aside-table__speed {
+  font-size: 1.4rem;
+  font-weight: 600; }
+
+.aside-table__speed span {
+  font-size: 0.8rem; }
