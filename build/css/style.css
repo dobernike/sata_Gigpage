@@ -915,3 +915,129 @@ td.speed-up__description {
 
 .modal-tarif__wrapper {
   padding: 0 1rem; }
+
+.modal-tarif__wrapper h3 {
+  margin: 0;
+  padding: 1rem 0;
+  font-size: 1.1rem;
+  text-align: center; }
+
+.modal-tarif__inner-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  min-height: 150px; }
+
+.modal-tarif__icon-bg img {
+  width: 130px; }
+
+.icon-bg__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #000000;
+  font-size: 0.8rem; }
+
+.icon-bg__item {
+  position: relative;
+  padding-left: 1rem; }
+  .icon-bg__item::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -5px;
+    width: 10px;
+    height: 10px;
+    background-image: url(../img/svg/blue-check-icon.svg);
+    background-position: center;
+    background-repeat: no-repeat; }
+
+.modal-tarif__advantage {
+  width: 50%; }
+
+.modal-tarif__chanel {
+  margin: 0;
+  margin-bottom: 0.5rem;
+  padding-left: 1.6rem;
+  color: #d31e47;
+  font-size: 0.8rem;
+  font-weight: 600;
+  position: relative; }
+  .modal-tarif__chanel span {
+    font-size: 1.5rem; }
+  .modal-tarif__chanel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.3rem;
+    width: 1.3rem;
+    background-color: #d31e47;
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+    -webkit-mask-image: url(../img/svg/tv-icon.svg);
+            mask-image: url(../img/svg/tv-icon.svg); }
+
+.modal-tarif__description {
+  color: #000;
+  font-size: 0.6rem; }
+
+.modal-tarif__total-wrapper {
+  display: flex;
+  align-content: center;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: lowercase; }
+
+.modal-tarif__total,
+.modal-tarif__points,
+.modal-tarif__cashback {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  margin: 0;
+  flex-grow: 1;
+  font-size: 0.8rem; }
+  .modal-tarif__total span,
+  .modal-tarif__points span,
+  .modal-tarif__cashback span {
+    font-size: 1.2rem; }
+  .modal-tarif__total::before,
+  .modal-tarif__points::before,
+  .modal-tarif__cashback::before {
+    content: "";
+    position: absolute;
+    top: 0.6rem;
+    left: 0.4rem;
+    width: 1.2rem;
+    min-height: 1.03rem;
+    background-repeat: no-repeat;
+    background-position: center; }
+
+.modal-tarif__total {
+  color: white;
+  background-color: #327fbe; }
+  .modal-tarif__total::before {
+    background-image: url(../img/svg/wallet-icon.svg); }
+
+.modal-tarif__cashback {
+  color: #58595b;
+  background-color: #EDEDEE; }
+  .modal-tarif__cashback::before {
+    background-image: url(../img/svg/cashback-icon.svg); }
+
+.modal-tarif__points {
+  cursor: pointer;
+  color: #58595b;
+  background-color: #D1D3D4; }
+  .modal-tarif__points::before {
+    background-color: #000;
+    -webkit-mask-image: url(../img/svg/pig-icon.svg);
+            mask-image: url(../img/svg/pig-icon.svg); }
+  .modal-tarif__points:hover, .modal-tarif__points:focus {
+    color: #327fbe; }
+  .modal-tarif__points:hover::before, .modal-tarif__points:focus::before {
+    background-color: #327fbe; }
