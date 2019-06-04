@@ -566,12 +566,14 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-around; }
 
-.block__icon {
-  margin: 0;
+.block__icon__benefit {
+  padding: 0;
   padding-top: 3.5rem;
   font-size: 0.7rem;
   position: relative; }
-  .block__icon::before {
+  .block__icon__benefit span {
+    font-size: 0.9rem; }
+  .block__icon__benefit::before {
     content: "";
     position: absolute;
     top: 0;
@@ -579,27 +581,22 @@ input[type="radio"].visually-hidden {
     min-height: 3rem;
     background-repeat: no-repeat;
     background-position: center; }
-  .block__icon--tv::before {
+  .block__icon__benefit--tv::before {
     background-image: url(../img/svg/tv-box-icon.svg); }
-  .block__icon--tv:hover::before, .block__icon--tv:focus::before {
+  .block__icon__benefit--tv:hover::before, .block__icon__benefit--tv:focus::before {
     background-image: url(../img/svg/tv-box-icon-blue.svg); }
-  .block__icon--router-1g::before {
+  .block__icon__benefit--router-1g::before {
     background-image: url(../img/svg/router-1gb-icon.svg); }
-  .block__icon--router-1g:hover::before, .block__icon--router-1g:focus::before {
+  .block__icon__benefit--router-1g:hover::before, .block__icon__benefit--router-1g:focus::before {
     background-image: url(../img/svg/router-1gb-icon-blue.svg); }
-  .block__icon--router-100mb::before {
+  .block__icon__benefit--router-100mb::before {
     background-image: url(../img/svg/router-100mb-icon.svg); }
-  .block__icon--router-100mb:hover::before, .block__icon--router-100mb:hover::before {
+  .block__icon__benefit--router-100mb:hover::before, .block__icon__benefit--router-100mb:hover::before {
     background-image: url(../img/svg/router-100mb-icon-blue.svg); }
-  .block__icon--ip::before {
+  .block__icon__benefit--ip::before {
     background-image: url(../img/svg/ip-icon.svg); }
-  .block__icon--ip:hover::before, .block__icon--ip:focus::before {
+  .block__icon__benefit--ip:hover::before, .block__icon__benefit--ip:focus::before {
     background-image: url(../img/svg/ip-icon-blue.svg); }
-
-.block__icon__benefit {
-  padding: 0; }
-  .block__icon__benefit span {
-    font-size: 0.9rem; }
 
 .block__total__wrapper {
   display: flex;

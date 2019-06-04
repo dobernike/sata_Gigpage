@@ -410,12 +410,15 @@ input[type="radio"].visually-hidden {
   justify-content: space-around;
 }
 
-.block__icon {
-  margin: 0;
+
+.block__icon__benefit {
+  padding: 0;
   padding-top: 3.5rem;
 
   font-size: 0.7rem;
-
+  & span {
+    font-size: 0.9rem;
+  }
   position: relative;
 
   &::before {
@@ -466,13 +469,6 @@ input[type="radio"].visually-hidden {
   &--ip:hover::before,
   &--ip:focus::before {
     background-image: url(../img/svg/ip-icon-blue.svg);
-  }
-}
-
-.block__icon__benefit {
-  padding: 0;
-  & span {
-    font-size: 0.9rem;
   }
 }
 
