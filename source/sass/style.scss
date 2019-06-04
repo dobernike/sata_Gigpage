@@ -343,22 +343,50 @@ input[type="radio"].visually-hidden {
 
   border-bottom: 8px solid grey;
 
-  &--x1 {
+  &--x1:hover,
+  &--x1:focus,
+  &--x1:active {
     color: $blue;
     border-color: $blue;
   }
 
-  &--x3 {
+  &--x1.block__btn-speed--active {
+    color: $blue;
+    border-color: $blue;
+  }
+
+  &--x3:hover,
+  &--x3:focus,
+  &--x3:active {
     color: $green;
     border-color: $green;
   }
 
-  &--x5 {
+  &--x3.block__btn-speed--active {
+    color: $green;
+    border-color: $green;
+  }
+
+  &--x5:hover,
+  &--x5:focus,
+  &--x5:active {
     color: $orange;
     border-color: $orange;
   }
 
-  &--x10 {
+  &--x5.block__btn-speed--active {
+    color: $orange;
+    border-color: $orange;
+  }
+
+  &--x10:hover,
+  &--x10:focus,
+  &--x10:active {
+    color: $red;
+    border-color: $red;
+  }
+
+  &--x10.block__btn-speed--active {
     color: $red;
     border-color: $red;
   }
