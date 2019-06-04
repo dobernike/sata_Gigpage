@@ -600,10 +600,6 @@ input[type="radio"].visually-hidden {
   width: 600px;
 }
 
-.speed-up__table tr {
-  // display: flex;
-}
-
 .speed-up__table th,
 .speed-up__table td {
   // box-sizing: border-box;
@@ -619,10 +615,6 @@ input[type="radio"].visually-hidden {
   &:last-child {
     border-right: none;
   }
-}
-
-.speed-up__table td {
-  // padding: 0.2rem 1rem;
 }
 
 .speed-up__label {
@@ -886,7 +878,7 @@ td.speed-up__description {
 .additional-services__block {
   margin-left: auto;
   margin-right: auto;
-  
+
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 
@@ -1015,12 +1007,6 @@ td.speed-up__description {
   justify-content: space-between;
   margin-bottom: 1rem;
   min-height: 150px;
-}
-
-.modal-tarif__icon-bg {
-  // width: 50%;
-  // flex-grow: 2;
-  // flex-basis: 50%;
 }
 
 .modal-tarif__icon-bg img {
