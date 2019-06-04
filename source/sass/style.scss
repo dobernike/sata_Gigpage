@@ -791,7 +791,7 @@ td.speed-up__description {
 }
 
 .longer-cheaper__tarifs td {
-  padding: 0 10px;
+  padding-left: 20px;
 
   text-align: center;
 }
@@ -919,4 +919,23 @@ td.speed-up__description {
   color: $blue;
   font-size: 0.7rem;
   text-decoration: underline;
+}
+
+.modal-tarif {
+  box-sizing: border-box;
+
+  margin: 0 auto;
+  margin-bottom: 1.2rem;
+
+  display: flex;
+  flex-direction: column;
+
+  background: white;
+  width: 315px;
+
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+}
+
+.modal-tarif__wrapper {
+  padding: 0 1rem;
 }
