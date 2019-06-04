@@ -669,9 +669,6 @@ td.speed-up__description {
   font-size: 1rem;
 }
 
-.longer-cheaper {
-}
-
 .longer-cheaper h2 {
   margin: 0;
   // margin-bottom: 1rem;
@@ -683,6 +680,7 @@ td.speed-up__description {
 
 .longer-cheaper__slogan {
   margin: 0;
+  margin-bottom: 1rem;
 
   text-align: center;
 }
@@ -695,7 +693,11 @@ td.speed-up__description {
   display: flex;
 
   margin: 0 auto;
+  margin-bottom: 3rem;
+
   width: 300px;
+
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
 }
 
 .aside-table,
@@ -721,40 +723,32 @@ td.speed-up__description {
   background-color: #ededee;
 }
 
-.longer-cheaper__tarifs th {
-  border-right: 2px solid #e2e3e4;
-}
-
-.longer-cheaper__tarifs th:last-child {
-  border: none;
-}
-
 .aside-table td,
 .longer-cheaper__tarifs td {
-  height: 150px;
-}
-
-.longer-cheaper__tarifs {
-  width: 555px;
+  height: 110px; // 120px
 }
 
 .aside-table__tarif {
   border-right: 8px solid black;
-  margin-right: 8px;
+
 
   &--100 {
+    color: $blue;
     border-color: $blue;
   }
 
   &--300 {
+    color: $green;
     border-color: $green;
   }
 
   &--500 {
+    color: $orange;
     border-color: $orange;
   }
 
   &--1000 {
+    color: $red;
     border-color: $red;
   }
 }
@@ -766,5 +760,163 @@ td.speed-up__description {
 
 .aside-table__speed span {
   font-size: 0.8rem;
+}
+
+.longer-cheaper__tarifs {
+  width: 515px;
+
+  &__100mb .longer-cheaper__tarifs__price {
+    color: $blue;
+  }
+
+  &__300mb .longer-cheaper__tarifs__price {
+    color: $green;
+  }
+
+  &__500mb .longer-cheaper__tarifs__price {
+    color: $orange;
+  }
+
+  &__1000mb .longer-cheaper__tarifs__price {
+    color: $red;
+  }
+}
+
+.longer-cheaper__tarifs th {
+  border-right: 2px solid #e2e3e4;
+}
+
+.longer-cheaper__tarifs th:last-child {
+  border: none;
+}
+
+.longer-cheaper__tarifs td {
+  padding: 0 10px;
+
+  text-align: center;
+}
+
+.longer-cheaper__tarifs p {
+  margin: 0;
+}
+
+.longer-cheaper__tarifs__price {
+  padding-bottom: 0.3rem;
+
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.longer-cheaper__tarifs__price span {
+  font-size: 2rem;
+}
+
+.longer-cheaper__tarifs__description {
+  color: #000000;
+  font-size: 0.6rem;
+}
+
+.longer-cheaper__tarifs__description span {
+  font-size: 0.8rem;
+}
+
+.additional-services h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.additional-services__block {
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+}
+
+.block__inner-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+
+  min-height: 150px;
+}
+
+.block__icon-bg {
+  position: relative;
+  padding-top: 100px;
+  margin: 0;
+  margin-top: auto;
+  // margin-right: 0.8rem;
+ 
   
+
+  // width: 60%;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    // left: 0;
+
+    margin-top: -25%;
+    // margin-left: 0.5rem;
+    
+    width: 100%;
+    height: 100%;
+
+    // background-color: #000;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--router-100mb::before {
+    background-image: url(../img/svg/router-100mb-icon.svg);
+  }
+
+  &--router-100mb:hover::before {
+    background-image: url(../img/svg/router-100mb-icon-blue.svg);
+  }
+
+  &--router-1gb::before {
+    background-image: url(../img/svg/router-1gb-icon.svg);
+  }
+
+  &--router-1gb:hover::before {
+    background-image: url(../img/svg/router-1gb-icon-blue.svg);
+  }
+}
+
+.block__icon__router-price {
+  color: $blue;
+  font-size: 1rem;
+  font-weight: 600;
+
+  & span {
+    font-size: 1.2rem;
+  }
+}
+
+.block__advantage {
+  margin-bottom: 0.4rem;
+}
+
+.block__advantage .block__speed {
+  margin-bottom: 0.5rem;
+  padding-left: 1.6rem;
+  
+  font-size: 0.8rem;
+}
+
+.block__router-advantage {
+  padding: 0;
+  margin: 0;
+
+  color: #000;
+  font-size: 0.7rem;
+}
+
+.block__more-info {
+  color: $blue;
+  font-size: 0.7rem;
+  text-decoration: underline;
 }
