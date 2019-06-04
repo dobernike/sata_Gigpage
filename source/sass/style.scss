@@ -10,8 +10,6 @@ $red: #d31e47;
 $tablet-width: 768px;
 $desktop-width: 1200px;
 $mobile-width-only: 767px;
-$retina-dpi: 144dpi;
-$retina-dppx: 1.5dppx;
 
 // @import "global";
 // Файл global.scss
@@ -117,7 +115,7 @@ input[type="radio"].visually-hidden {
 // Файл all-in-one.scss
 
 .all-in-one {
-  width: 320px;
+  // width: 320px;
   margin: 0 auto;
   padding-top: 2rem; // 45px;
 
@@ -132,6 +130,10 @@ input[type="radio"].visually-hidden {
   }
 }
 
+.all-in-one__block {
+  margin: 0 auto;
+}
+
 .all-in-one__slogan {
   margin: 0;
   margin-bottom: 2.5rem;
@@ -142,9 +144,29 @@ input[type="radio"].visually-hidden {
   font-size: 1.2rem;
 }
 
+.all-in-one__primary-block {
+  margin: 0 auto;
+  width: 320px;
+}
+
 .all-in-one__tarifs-wrapper {
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  // flex-direction: column;
+  justify-content: space-between;
+  width: 320px;
+  // width: 84%;
+}
+
+@media (min-width: $tablet-width) {
+  .all-in-one__tarifs-wrapper {
+    width: $tablet-width;
+
+    & .all-in-one__block {
+      margin: 0;
+    }
+  }
 }
 
 // @import "block";
@@ -153,11 +175,11 @@ input[type="radio"].visually-hidden {
 .block {
   box-sizing: border-box;
 
-  margin: 0 auto;
+  // margin: 0 auto;
   margin-bottom: 1.2rem;
 
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
 
   background: white;
   width: 300px;
