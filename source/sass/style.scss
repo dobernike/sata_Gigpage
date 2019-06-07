@@ -239,9 +239,8 @@ input[type="radio"].visually-hidden {
 }
 
 .block__general-wrapper {
+  position: relative;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
-
-  z-index: 1;
 }
 
 .block__wrapper {
