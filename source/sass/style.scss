@@ -289,6 +289,13 @@ input[type="radio"].visually-hidden {
 }
 
 .block__speed {
+  &--x1 {
+    color: $blue;
+    &::before {
+      background-color: $blue;
+    }
+  }
+
   &--x3 {
     color: $green;
     &::before {
