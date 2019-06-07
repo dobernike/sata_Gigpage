@@ -339,7 +339,7 @@ input[type="radio"].visually-hidden {
   font-size: 0.7rem;
   color: grey;
 
-  cursor: auto;
+  cursor: default;
 
   border-bottom: 8px solid grey;
 
@@ -353,6 +353,7 @@ input[type="radio"].visually-hidden {
   &--x1.block__btn-speed--active {
     color: $blue;
     border-color: $blue;
+    cursor: default;
   }
 
   &--x3:hover,
@@ -365,6 +366,7 @@ input[type="radio"].visually-hidden {
   &--x3.block__btn-speed--active {
     color: $green;
     border-color: $green;
+    cursor: default;
   }
 
   &--x5:hover,
@@ -377,6 +379,7 @@ input[type="radio"].visually-hidden {
   &--x5.block__btn-speed--active {
     color: $orange;
     border-color: $orange;
+    cursor: default;
   }
 
   &--x10:hover,
@@ -389,6 +392,7 @@ input[type="radio"].visually-hidden {
   &--x10.block__btn-speed--active {
     color: $red;
     border-color: $red;
+    cursor: default;
   }
 
   &--x1,
@@ -907,7 +911,9 @@ td.speed-up__description {
     font-size: 1.2rem;
   }
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     text-decoration: none;
   }
   // margin-right: 0.8rem;
