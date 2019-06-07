@@ -497,12 +497,15 @@ input[type="radio"].visually-hidden {
   flex-grow: 1; // width: 50%;
 
   font-weight: 600;
+  font-size: 1rem;
   line-height: 1.5rem;
+  
 
   // align-self: center;
 
   & span {
     font-size: 1.5rem;
+    // line-height: 1.6rem;
   }
 
   &::before {
@@ -895,6 +898,18 @@ td.speed-up__description {
   padding-top: 100px;
   margin: 0;
   margin-top: auto;
+
+  color: $blue;
+  font-size: 1rem;
+  font-weight: 600;
+
+  & span {
+    font-size: 1.2rem;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
   // margin-right: 0.8rem;
 
   // width: 60%;
@@ -904,18 +919,19 @@ td.speed-up__description {
 
     position: absolute;
     top: 0;
-    // left: 0;
+    left: 0;
+    right: 0;
 
     margin-top: -25%;
-    // margin-left: 0.5rem;
 
     width: 100%;
     height: 100%;
 
-    // background-color: #000;
+
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: contain;
+
   }
 
   &--router-100mb::before {
@@ -932,16 +948,6 @@ td.speed-up__description {
 
   &--router-1gb:hover::before {
     background-image: url(../img/svg/router-1gb-icon-blue.svg);
-  }
-}
-
-.block__icon__router-price {
-  color: $blue;
-  font-size: 1rem;
-  font-weight: 600;
-
-  & span {
-    font-size: 1.2rem;
   }
 }
 
