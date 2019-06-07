@@ -1,3 +1,53 @@
+/*--- Переключение скорости "x*" --- */
+
+const handleSpeedChange = multi => {
+  const classes = multi.className;
+  const regex = /--x(\d*)/gm;
+  const match = regex.exec(classes)[1];
+
+  const BASE_SPEED = 100;
+  let speed = BASE_SPEED * match;
+  // Continue code here ...
+};
+
+// Удаление всех --active классов
+const handleDelActive = item => {
+  const actives = item.parentNode.querySelectorAll(`.block__btn-speed--active`);
+  for (const active of actives) {
+    active.classList.remove("block__btn-speed--active");
+  }
+};
+
+const speedsX1 = document.querySelectorAll(`.block__btn-speed--x1`);
+for (const speedX1 of speedsX1) {
+  speedX1.addEventListener(`click`, () => {
+    if (!speedX1.classList.contains(`block__btn-speed--active`)) {
+      handleDelActive(speedX1);
+
+      speedX1.classList.add(`block__btn-speed--active`);
+      handleSpeedChange(speedX1);
+    }
+  });
+}
+
+const speedsX3 = document.querySelectorAll(`.block__btn-speed--x3`);
+for (const speedX3 of speedsX3) {
+  speedX3.addEventListener(`click`, () => {
+    if (!speedX3.classList.contains(`block__btn-speed--active`)) {
+      handleDelActive(speedX3);
+
+      speedX3.classList.add(`block__btn-speed--active`);
+
+      handleSpeedChange(speedX3);
+    }
+  });
+}
+
+const speedsX5 = document.querySelectorAll(`.block__btn-speed--x5`);
+
+const speedsX10 = document.querySelectorAll(`.block__btn-speed--x10`);
+
+/*--- Модульные окна и их вызовы --- */
 
 // Модальные окна
 const modalNexbox = document.querySelector(`.modal-tarif--nexbox`);
@@ -15,7 +65,6 @@ for (const modalClose of modalCloses) {
     modalOverlay.classList.remove(`modal-show`);
   });
 }
-
 
 // Функция принимает элемент и модуль и не обязательный оверлей, модуль должен показываться при клике на элемент
 const handleShowModal = (item, modal, overlay = modalOverlay) => {
@@ -76,3 +125,5 @@ const moreInfos = document.querySelectorAll(`.block__more-info`);
 for (const moreInfo of moreInfos) {
   handleShowModal(moreInfo, modalRouter1gb);
 }
+
+/* --- End модульных окон и их вызовов ---  */
