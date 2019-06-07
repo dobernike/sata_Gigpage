@@ -529,6 +529,7 @@ input[type="radio"].visually-hidden {
   width: 1.8rem;
   font-size: 0.7rem;
   color: grey;
+  outline-width: 0;
   cursor: default;
   border-bottom: 8px solid grey; }
   .block__btn-speed--x1:hover, .block__btn-speed--x1:focus, .block__btn-speed--x1:active {
@@ -537,6 +538,7 @@ input[type="radio"].visually-hidden {
   .block__btn-speed--x1.block__btn-speed--active {
     color: #327fbe;
     border-color: #327fbe;
+    outline-width: 0;
     cursor: default; }
   .block__btn-speed--x3:hover, .block__btn-speed--x3:focus, .block__btn-speed--x3:active {
     color: #6aaf44;
@@ -544,6 +546,7 @@ input[type="radio"].visually-hidden {
   .block__btn-speed--x3.block__btn-speed--active {
     color: #6aaf44;
     border-color: #6aaf44;
+    outline-width: 0;
     cursor: default; }
   .block__btn-speed--x5:hover, .block__btn-speed--x5:focus, .block__btn-speed--x5:active {
     color: #f15a29;
@@ -551,6 +554,7 @@ input[type="radio"].visually-hidden {
   .block__btn-speed--x5.block__btn-speed--active {
     color: #f15a29;
     border-color: #f15a29;
+    outline-width: 0;
     cursor: default; }
   .block__btn-speed--x10:hover, .block__btn-speed--x10:focus, .block__btn-speed--x10:active {
     color: #d31e47;
@@ -558,8 +562,10 @@ input[type="radio"].visually-hidden {
   .block__btn-speed--x10.block__btn-speed--active {
     color: #d31e47;
     border-color: #d31e47;
+    outline-width: 0;
     cursor: default; }
   .block__btn-speed--x1, .block__btn-speed--x3, .block__btn-speed--x5, .block__btn-speed--x10 {
+    outline-width: 5px;
     cursor: pointer; }
 
 .block__btn-speed span {
