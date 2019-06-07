@@ -494,6 +494,11 @@ input[type="radio"].visually-hidden {
 .block__chanel span {
   font-size: 1.5rem; }
 
+.block__speed--x1 {
+  color: #327fbe; }
+  .block__speed--x1::before {
+    background-color: #327fbe; }
+
 .block__speed--x3 {
   color: #6aaf44; }
   .block__speed--x3::before {
