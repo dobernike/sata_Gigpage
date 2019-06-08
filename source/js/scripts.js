@@ -1,13 +1,40 @@
 /*--- Переключение скорости "x*" --- */
+const handleSpeedClick = array => {
+  for (const item of array) {
+    item.addEventListener(`click`, () => {
+      if (!item.classList.contains(`block__btn-speed--active`)) {
+        handleDelActive(item);
 
+        item.classList.add(`block__btn-speed--active`);
+        handleSpeedChange(item);
+      }
+    });
+  }
+};
+
+// Добавляет функцию клика и изменения скорости и цены.
 const handleSpeedChange = multi => {
-  const classes = multi.className;
+  const multiClasses = multi.className;
   const regex = /--x(\d*)/gm;
-  const match = regex.exec(classes)[1];
+  const match = regex.exec(multiClasses)[1];
 
   const BASE_SPEED = 100;
   let speed = BASE_SPEED * match;
   // Continue code here ...
+  const upperNode = multi.parentNode.parentNode;
+
+  const speedBlock = upperNode.querySelector(`.block__speed`);
+
+  speedBlock.className = `block__speed block__speed--x${match}`;
+
+  speedBlock.querySelector(`span`).innerText = speed;
+
+  const cost = upperNode.parentNode.parentNode.querySelector(
+    `.block__total span`
+  );
+
+  // Нужно прописать для каждого тарифа
+  cost.innerText *= match;
 };
 
 // Удаление всех --active классов
@@ -19,33 +46,16 @@ const handleDelActive = item => {
 };
 
 const speedsX1 = document.querySelectorAll(`.block__btn-speed--x1`);
-for (const speedX1 of speedsX1) {
-  speedX1.addEventListener(`click`, () => {
-    if (!speedX1.classList.contains(`block__btn-speed--active`)) {
-      handleDelActive(speedX1);
-
-      speedX1.classList.add(`block__btn-speed--active`);
-      handleSpeedChange(speedX1);
-    }
-  });
-}
+handleSpeedClick(speedsX1);
 
 const speedsX3 = document.querySelectorAll(`.block__btn-speed--x3`);
-for (const speedX3 of speedsX3) {
-  speedX3.addEventListener(`click`, () => {
-    if (!speedX3.classList.contains(`block__btn-speed--active`)) {
-      handleDelActive(speedX3);
-
-      speedX3.classList.add(`block__btn-speed--active`);
-
-      handleSpeedChange(speedX3);
-    }
-  });
-}
+handleSpeedClick(speedsX3);
 
 const speedsX5 = document.querySelectorAll(`.block__btn-speed--x5`);
+handleSpeedClick(speedsX5);
 
 const speedsX10 = document.querySelectorAll(`.block__btn-speed--x10`);
+handleSpeedClick(speedsX10);
 
 /*--- Модульные окна и их вызовы --- */
 
