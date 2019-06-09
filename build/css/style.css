@@ -682,6 +682,11 @@ input[type="radio"].visually-hidden {
   margin: 0 auto;
   width: 300px; }
 
+@media (min-width: 768px) {
+  .speed-up {
+    margin: 0 auto;
+    width: 600px; } }
+
 .speed-up h2 {
   margin: 0;
   margin-bottom: 2rem;
@@ -796,6 +801,10 @@ td.speed-up__description {
   width: 300px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); }
 
+@media (min-width: 768px) {
+  .longer-cheaper__wrapper {
+    width: 564px; } }
+
 .aside-table,
 .longer-cheaper__tarifs {
   border-collapse: collapse; }
@@ -887,6 +896,17 @@ td.speed-up__description {
   margin: 0;
   margin-bottom: 2rem;
   text-align: center; }
+
+.additional-services__wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 320px; }
+
+@media (min-width: 768px) {
+  .additional-services__wrapper {
+    width: 768px; } }
 
 .additional-services__block {
   margin-left: auto;
