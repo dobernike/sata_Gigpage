@@ -1,14 +1,32 @@
-/*--- Переключение скорости "x*" --- */
-const handleSpeedClick = array => {
-  for (const item of array) {
-    item.addEventListener(`click`, () => {
-      if (!item.classList.contains(`block__btn-speed--active`)) {
-        handleDelActive(item);
-
-        item.classList.add(`block__btn-speed--active`);
-        handleSpeedChange(item);
-      }
-    });
+// Выдает стоимость тарифа
+const getTarifCost = (tarif, speedX) => {
+  speedX = Number(speedX);
+  if (tarif === "Гиперион +") {
+    switch (speedX) {
+      case 1:
+        return 1400;
+      case 3:
+        return 1500;
+      case 5:
+        return 1600;
+      case 10:
+        return 1700;
+      default:
+        return -1;
+    }
+  } else if (tarif === "Прометей +") {
+    switch (speedX) {
+      case 1:
+        return 1400;
+      case 3:
+        return 1500;
+      case 5:
+        return 1600;
+      case 10:
+        return 1700;
+      default:
+        return -1;
+    }
   }
 };
 
@@ -20,21 +38,18 @@ const handleSpeedChange = multi => {
 
   const BASE_SPEED = 100;
   let speed = BASE_SPEED * match;
-  // Continue code here ...
+
   const upperNode = multi.parentNode.parentNode;
 
   const speedBlock = upperNode.querySelector(`.block__speed`);
-
   speedBlock.className = `block__speed block__speed--x${match}`;
-
   speedBlock.querySelector(`span`).innerText = speed;
 
-  const cost = upperNode.parentNode.parentNode.querySelector(
-    `.block__total span`
-  );
+  const blockNode = upperNode.parentNode.parentNode;
+  const tarifName = blockNode.querySelector(`h3`).innerText;
+  const cost = blockNode.querySelector(`.block__total span`);
 
-  // Нужно прописать для каждого тарифа
-  cost.innerText *= match;
+  cost.innerText = getTarifCost(tarifName, match);
 };
 
 // Удаление всех --active классов
@@ -42,6 +57,20 @@ const handleDelActive = item => {
   const actives = item.parentNode.querySelectorAll(`.block__btn-speed--active`);
   for (const active of actives) {
     active.classList.remove("block__btn-speed--active");
+  }
+};
+
+/*--- Переключение скорости "x*" --- */
+const handleSpeedClick = array => {
+  for (const item of array) {
+    item.addEventListener(`click`, () => {
+      if (!item.classList.contains(`block__btn-speed--active`)) {
+        handleDelActive(item);
+
+        item.classList.add(`block__btn-speed--active`);
+        handleSpeedChange(item);
+      }
+    });
   }
 };
 
