@@ -795,9 +795,9 @@ td.speed-up__description {
   position: relative; }
 
 .longer-cheaper__wrapper {
-  display: flex;
   margin: 0 auto;
   margin-bottom: 3rem;
+  display: flex;
   width: 300px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); }
 
@@ -808,6 +808,9 @@ td.speed-up__description {
 .aside-table,
 .longer-cheaper__tarifs {
   border-collapse: collapse; }
+
+.aside-table {
+  width: 50px; }
 
 .aside-table span,
 .aside-table__speed {

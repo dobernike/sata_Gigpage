@@ -764,10 +764,10 @@ td.speed-up__description {
 }
 
 .longer-cheaper__wrapper {
-  display: flex;
-
   margin: 0 auto;
   margin-bottom: 3rem;
+
+  display: flex;
 
   width: 300px;
 
@@ -783,6 +783,10 @@ td.speed-up__description {
 .aside-table,
 .longer-cheaper__tarifs {
   border-collapse: collapse;
+}
+
+.aside-table {
+  width: 50px;
 }
 
 .aside-table span,
@@ -840,6 +844,8 @@ td.speed-up__description {
 .aside-table__speed span {
   font-size: 0.8rem;
 }
+
+
 
 .longer-cheaper__tarifs {
   width: 515px;
