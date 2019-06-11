@@ -378,7 +378,6 @@ input[type="radio"].visually-hidden {
   text-decoration: underline; }
 
 .all-in-one {
-  margin: 0 auto;
   padding-top: 2rem; }
   .all-in-one h2 {
     margin: 0;
@@ -386,9 +385,6 @@ input[type="radio"].visually-hidden {
     text-align: center;
     font-weight: 600;
     font-size: 1.7rem; }
-
-.all-in-one__block {
-  margin: 0 auto; }
 
 .all-in-one__slogan {
   margin: 0;
@@ -398,19 +394,14 @@ input[type="radio"].visually-hidden {
   font-size: 1.2rem; }
 
 .all-in-one__primary-block {
-  margin: 0 auto;
-  width: 320px; }
-
-.all-in-one__tarifs-wrapper {
-  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 320px; }
+  justify-content: center; }
 
-@media (min-width: 768px) {
-  .all-in-one__tarifs-wrapper {
-    width: 768px; } }
+.all-in-one__tarifs-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
 
 @media (min-width: 1200px) {
   .all-in-one {
@@ -421,9 +412,7 @@ input[type="radio"].visually-hidden {
   .all-in-one__slogan {
     margin-bottom: 80px;
     font-size: 40px;
-    line-height: 48px; }
-  .all-in-one__primary-block {
-    width: 520px; } }
+    line-height: 48px; } }
 
 .block {
   box-sizing: border-box;
@@ -455,16 +444,15 @@ input[type="radio"].visually-hidden {
   .block--popular::before {
     content: "популярно";
     background: linear-gradient(to top, #802a90, #92278f); }
-
-.block h3 {
-  margin: 0;
-  margin-bottom: 0.8rem;
-  padding: 1rem 0;
-  color: #d31e47;
-  text-align: right;
-  font-size: 1.6rem;
-  font-weight: 600;
-  border-bottom: 1px solid #a7a9ac; }
+  .block h3 {
+    margin: 0;
+    margin-bottom: 0.8rem;
+    padding: 1rem 0;
+    color: #d31e47;
+    text-align: right;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-bottom: 1px solid #a7a9ac; }
 
 .block__general-wrapper {
   position: relative;
@@ -588,6 +576,7 @@ input[type="radio"].visually-hidden {
   font-size: 1rem; }
 
 .block__icon__wrapper {
+  min-height: 72px;
   margin-bottom: 20px;
   display: flex;
   justify-content: space-around; }
@@ -673,7 +662,7 @@ input[type="radio"].visually-hidden {
   color: #58595b;
   background-color: #ededee; }
   .block__points::before {
-    background-color: #58595B;
+    background-color: #58595b;
     -webkit-mask-image: url(../img/svg/pig-icon.svg);
             mask-image: url(../img/svg/pig-icon.svg); }
   .block__points:hover, .block__points:focus {
@@ -687,6 +676,11 @@ input[type="radio"].visually-hidden {
   color: black;
   font-size: 0.6rem;
   background-color: #ebebec; }
+
+@media (min-width: 600px) {
+  .block {
+    margin-right: 26px;
+    margin-left: 26px; } }
 
 @media (min-width: 1200px) {
   .block {
@@ -755,7 +749,9 @@ input[type="radio"].visually-hidden {
   .block__description {
     padding: 25px;
     font-size: 18px;
-    line-height: 21px; } }
+    line-height: 21px; }
+  .block__icon__wrapper {
+    min-height: 140px; } }
 
 .speed-up {
   margin: 0 auto;
@@ -980,19 +976,11 @@ td.speed-up__description {
   text-align: center; }
 
 .additional-services__wrapper {
-  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 320px; }
-
-@media (min-width: 768px) {
-  .additional-services__wrapper {
-    width: 768px; } }
+  justify-content: center; }
 
 .additional-services__block {
-  margin-left: auto;
-  margin-right: auto;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); }
 
 .block__inner-wrapper {
