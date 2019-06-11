@@ -162,13 +162,30 @@ input[type="radio"].visually-hidden {
 @media (min-width: $tablet-width) {
   .all-in-one__tarifs-wrapper {
     width: $tablet-width;
-
-    & .all-in-one__block {
-      margin: 0;
-    }
   }
 }
 
+@media (min-width: $desktop-width) {
+  .all-in-one {
+    padding-top: 50px;
+
+    & h2 {
+      font-size: 55px;
+      line-height: 66px;
+    }
+  }
+
+  .all-in-one__slogan {
+    margin-bottom: 80px;
+
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .all-in-one__primary-block {
+    width: 520px;
+  }
+}
 // @import "block";
 // Файл block.scss
 
@@ -176,7 +193,7 @@ input[type="radio"].visually-hidden {
   box-sizing: border-box;
 
   // margin: 0 auto;
-  margin-bottom: 1.2rem;
+  margin-bottom: 2rem;
 
   // display: flex;
   // flex-direction: column;
@@ -509,7 +526,7 @@ input[type="radio"].visually-hidden {
   padding-left: 1.5rem;
   margin: 0;
 
-  flex-grow: 1; // width: 50%;
+  width: 50%;
 
   font-weight: 600;
   font-size: 1rem;
@@ -561,7 +578,7 @@ input[type="radio"].visually-hidden {
   background-color: #ededee;
 
   &::before {
-    background-color: #000;
+    background-color: #58595B;
     mask-image: url(../img/svg/pig-icon.svg);
     // background-image: url(../img/svg/pig-icon.svg);
   }
@@ -581,7 +598,6 @@ input[type="radio"].visually-hidden {
 
 .block__description {
   margin: 0;
-  margin-bottom: 2rem;
   padding: 1rem;
 
   color: black;
@@ -589,6 +605,120 @@ input[type="radio"].visually-hidden {
 
   background-color: #ebebec;
   // z-index: -1;
+}
+
+@media (min-width: $desktop-width) {
+  .block {
+    margin-bottom: 85px;
+
+    width: 520px;
+
+    &::before {
+      display: flex;
+
+      top: -35px;
+      left: 35px;
+
+      min-width: 115px;
+      height: 35px;
+
+      font-size: 22px;
+
+      justify-content: center;
+      align-items: center;
+    }
+
+    & h3 {
+      padding: 20px 0 16px 0;
+
+      font-size: 36px;
+      line-height: 43px;
+    }
+  }
+
+  .block__wrapper {
+    padding: 0 35px;
+  }
+
+  .block__speed,
+  .block__chanel {
+    padding-left: 40px;
+
+    font-size: 28px;
+    line-height: 33px;
+
+    & span {
+      font-size: 45px;
+      line-height: 54px;
+    }
+  }
+
+  .block__chanel::before,
+  .block__speed::before {
+    top: 50%;
+
+    margin-top: -14px;
+
+    width: 28px;
+    height: 28px;
+  }
+
+  .block__btn-speed {
+    width: 50px;
+
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: lowercase;
+
+    & span {
+      font-size: 24px;
+    }
+  }
+
+  .block__icon__benefit {
+    padding-top: 115px;
+
+    font-size: 21px;
+
+    &::before {
+      min-height: 100px;
+    }
+
+    & span {
+      font-size: 21px;
+    }
+  }
+
+  .block__points,
+  .block__total {
+    padding-top: 13px;
+    padding-bottom: 17px;
+
+
+    font-size: 30px;
+    line-height: 36px;
+
+    & span {
+      font-size: 40px;
+      line-height: 48px;
+    }
+
+    &::before {
+      top: 50%;
+
+      margin-top: -20px;
+
+      height: 32px;
+      width: 37px;
+    }
+  }
+
+  .block__description {
+    padding: 25px;
+
+    font-size: 18px;
+    line-height: 21px;
+  }
 }
 
 .speed-up {
@@ -845,8 +975,6 @@ td.speed-up__description {
   font-size: 0.8rem;
 }
 
-
-
 .longer-cheaper__tarifs {
   width: 515px;
 
@@ -1044,6 +1172,18 @@ td.speed-up__description {
 
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   z-index: 3;
+}
+
+@media (min-width: $tablet-width) {
+  .modal-tarif {
+    top: 50px;
+    left: 50%;
+
+    // margin-bottom: 1.2rem;
+    margin-left: -380px;
+
+    width: 760px;
+  }
 }
 
 .modal-tarif__wrapper {
@@ -1291,4 +1431,5 @@ td.speed-up__description {
 
 .modal-show {
   display: block;
+  overflow: hidden;
 }
