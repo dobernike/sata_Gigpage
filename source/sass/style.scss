@@ -1263,10 +1263,6 @@ td.speed-up__description {
   font-size: 1rem;
   font-weight: 600;
 
-  & span {
-    // font-size: 1.2rem;
-  }
-
   &:hover,
   &:focus,
   &:active {
@@ -1326,7 +1322,7 @@ td.speed-up__description {
   padding: 0;
   margin: 0;
 
-  color: #000;
+  color: #414042;
   font-size: 0.7rem;
 }
 
@@ -1350,6 +1346,48 @@ td.speed-up__description {
     font-size: 36px;
     line-height: 43px;
   }
+
+  .block__icon-bg {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .block__advantage .block__speed {
+    padding-left: 40px;
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .block__router-advantage,
+  .block__more-info {
+    font-size: 16px;
+  }
+
+  .block__router-advantage,
+  .block__more-info {
+    padding-left: 20px;
+  }
+
+  .additional-services__block .block__points::before,
+  .additional-services__block .block__total::before {
+    left: 25px;
+  }
+
+  .additional-services__block .block__points {
+    font-size: 21px;
+    line-height: 26px;
+
+    & span{
+      font-size: 30px;
+    line-height: 36px;
+    }
+
+    &::before {
+      left: 35px;
+    }
+  }
+
+
 }
 
 .modal-tarif {
