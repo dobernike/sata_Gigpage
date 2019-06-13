@@ -743,12 +743,6 @@ input[type="radio"].visually-hidden {
   width: 300px;
 }
 
-@media (min-width: $tablet-width) {
-  .speed-up {
-    width: 600px;
-  }
-}
-
 .speed-up h2 {
   margin: 0;
   margin-bottom: 2rem;
@@ -887,6 +881,12 @@ td.speed-up__description {
   font-size: 1rem;
 }
 
+@media (min-width: $tablet-width) {
+  .speed-up {
+    width: 600px;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .speed-up {
     width: 1100px;
@@ -895,6 +895,10 @@ td.speed-up__description {
       font-size: 55px;
       line-height: 66px;
     }
+  }
+
+  .speed-up__wrapper {
+    margin-bottom: 55px;
   }
 
   .speed-up__table {
@@ -1006,15 +1010,18 @@ td.speed-up__description {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 
-@media (min-width: $tablet-width) {
-  .longer-cheaper__wrapper {
-    width: 564px;
-  }
+.longer-cheaper__table-wrapper {
+  overflow-x: auto;
 }
 
 .aside-table,
 .longer-cheaper__tarifs {
   border-collapse: collapse;
+}
+
+.longer-cheaper__wrapper-table {
+  width: 100%;
+  overflow-x: auto;
 }
 
 .aside-table {
@@ -1071,10 +1078,9 @@ td.speed-up__description {
 .aside-table__speed {
   font-size: 1.4rem;
   font-weight: 600;
-}
-
-.aside-table__speed span {
-  font-size: 0.8rem;
+  & span {
+    font-size: 0.8rem;
+  }
 }
 
 .longer-cheaper__tarifs {
@@ -1097,22 +1103,29 @@ td.speed-up__description {
   }
 }
 
-.longer-cheaper__tarifs th {
+.longer-cheaper__tarifs th,
+.longer-cheaper__tarifs-descript td {
   border-right: 2px solid #e2e3e4;
 }
 
-.longer-cheaper__tarifs th:last-child {
+.longer-cheaper__tarifs th:last-child,
+.longer-cheaper__tarifs-descript td:last-child {
   border: none;
 }
 
 .longer-cheaper__tarifs td {
-  padding-left: 20px;
+  // padding-left: 20px;
 
   text-align: center;
 }
 
 .longer-cheaper__tarifs p {
   margin: 0;
+}
+
+.aside-table__tarif:nth-child(even),
+.longer-cheaper__tarifs-descript:nth-child(even) {
+  background-color: #f1f2f2;
 }
 
 .longer-cheaper__tarifs__price {
@@ -1127,12 +1140,85 @@ td.speed-up__description {
 }
 
 .longer-cheaper__tarifs__description {
-  color: #000000;
+  color: #58595b;
   font-size: 0.6rem;
 }
 
 .longer-cheaper__tarifs__description span {
   font-size: 0.8rem;
+}
+
+@media (min-width: $tablet-width) {
+  .longer-cheaper__wrapper {
+    width: 564px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .longer-cheaper__wrapper {
+    margin-bottom: 70px;
+
+    width: 1100px;
+  }
+
+  .longer-cheaper h2 {
+    font-size: 55px;
+    line-height: 66px;
+  }
+
+  .longer-cheaper__slogan {
+    margin-bottom: 45px;
+
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .longer-cheaper__table-wrapper {
+    width: 100%;
+  }
+
+  .longer-cheaper__tarifs {
+    width: 100%;
+  }
+  .aside-table__speed {
+    padding-right: 12px;
+    padding-left: 10px;
+
+    font-size: 30px;
+
+    & span {
+      font-size: 18px;
+    }
+  }
+
+  .aside-table th,
+  .longer-cheaper__tarifs th {
+    padding: 15px 0;
+
+    font-size: 30px;
+    line-height: 48px;
+  }
+
+  .longer-cheaper__tarifs__price {
+    padding: 0;
+
+    font-size: 30px;
+    line-height: 48px;
+
+    & span {
+      font-size: 40px;
+    }
+  }
+
+  .longer-cheaper__tarifs__description {
+    font-size: 21px;
+    line-height: 25px;
+
+    & span {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
 }
 
 .additional-services h2 {
@@ -1178,7 +1264,7 @@ td.speed-up__description {
   font-weight: 600;
 
   & span {
-    font-size: 1.2rem;
+    // font-size: 1.2rem;
   }
 
   &:hover,
@@ -1248,6 +1334,22 @@ td.speed-up__description {
   color: $blue;
   font-size: 0.7rem;
   text-decoration: underline;
+}
+
+@media (min-width: $desktop-width) {
+  .additional-services h2 {
+    margin-bottom: 80px;
+
+    font-size: 55px;
+    line-height: 66px;
+  }
+
+  .block__wrapper h3 {
+    margin-bottom: 10px;
+
+    font-size: 36px;
+    line-height: 43px;
+  }
 }
 
 .modal-tarif {
