@@ -112,16 +112,15 @@ input[type="radio"].visually-hidden {
 }
 
 // @import "page-header";
-// .page-header {
-//   min-height: 110px;
-//   border-bottom: 8px solid #F0F0F1;
-// }
 
-// .page-header__wrapper {
-//   width: $desktop-width;
-// }
+.page-header {
+  min-height: 110px;
+  border-bottom: 8px solid #F0F0F1;
+}
 
-
+.page-header__wrapper {
+  width: $desktop-width;
+}
 
 // @import "all-in-one";
 // Файл all-in-one.scss
