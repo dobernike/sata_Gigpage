@@ -556,6 +556,7 @@ input[type="radio"].visually-hidden {
 
     background-repeat: no-repeat;
     background-position: center;
+    mask-repeat: no-repeat;
   }
 
   &:hover,
@@ -707,14 +708,6 @@ input[type="radio"].visually-hidden {
     padding-top: 13px;
     padding-bottom: 17px;
 
-    font-size: 30px;
-    line-height: 36px;
-
-    & span {
-      font-size: 40px;
-      line-height: 48px;
-    }
-
     &::before {
       top: 50%;
 
@@ -724,6 +717,31 @@ input[type="radio"].visually-hidden {
       width: 37px;
     }
   }
+
+  .block__total {
+    font-size: 30px;
+    line-height: 36px;
+
+    & span {
+      font-size: 40px;
+      line-height: 48px;
+    }
+  }
+
+  .block__points {
+    font-size: 21px;
+    line-height: 26px;
+
+    & span {
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    &::before {
+      left: 35px;
+    }
+  }
+
 
   .block__description {
     padding: 25px;
@@ -846,6 +864,7 @@ td.speed-up__description {
 
     background-repeat: no-repeat;
     background-position: center;
+    mask-repeat: no-repeat;
   }
 }
 
@@ -952,8 +971,8 @@ td.speed-up__description {
     // text-align: right;
 
     &::before {
-      width: 23px;
-      height: 22px;
+      width: 24px;
+      height: 24px;
     }
 
     & span {
@@ -966,7 +985,7 @@ td.speed-up__description {
     line-height: 25px;
 
     &::before {
-      width: 25px;
+      width: 26px;
       height: 22px;
     }
 
@@ -1105,6 +1124,7 @@ td.speed-up__description {
 
 .longer-cheaper__tarifs th,
 .longer-cheaper__tarifs-descript td {
+  width: 25%;
   border-right: 2px solid #e2e3e4;
 }
 
@@ -1368,26 +1388,9 @@ td.speed-up__description {
     padding-left: 20px;
   }
 
-  .additional-services__block .block__points::before,
   .additional-services__block .block__total::before {
     left: 25px;
   }
-
-  .additional-services__block .block__points {
-    font-size: 21px;
-    line-height: 26px;
-
-    & span{
-      font-size: 30px;
-    line-height: 36px;
-    }
-
-    &::before {
-      left: 35px;
-    }
-  }
-
-
 }
 
 .modal-tarif {
@@ -1408,18 +1411,6 @@ td.speed-up__description {
 
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   z-index: 3;
-}
-
-@media (min-width: $tablet-width) {
-  .modal-tarif {
-    top: 50px;
-    left: 50%;
-
-    // margin-bottom: 1.2rem;
-    margin-left: -380px;
-
-    width: 760px;
-  }
 }
 
 .modal-tarif__wrapper {
@@ -1450,7 +1441,7 @@ td.speed-up__description {
   padding: 0;
   list-style: none;
 
-  color: #000000;
+  color: #414042;
   font-size: 0.8rem;
 }
 
@@ -1519,6 +1510,8 @@ td.speed-up__description {
 }
 
 .modal-tarif__description {
+  margin: 0;
+
   color: #000;
   font-size: 0.6rem;
 }
@@ -1590,7 +1583,7 @@ td.speed-up__description {
   background-color: #d1d3d4;
 
   &::before {
-    background-color: #000;
+    background-color: #58595B;
     mask-image: url(../img/svg/pig-icon.svg);
     // background-image: url(../img/svg/pig-icon.svg);
   }
@@ -1668,4 +1661,115 @@ td.speed-up__description {
 .modal-show {
   display: block;
   overflow: hidden;
+}
+
+@media (min-width: $tablet-width) {
+  .modal-tarif {
+    top: 50px;
+
+    // margin-bottom: 1.2rem;
+    margin-left: -380px;
+
+    width: 760px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .modal-tarif {
+    margin-left: -390px;
+
+    width: 780px;
+  }
+
+  .modal-tarif__wrapper {
+    padding: 0 55px;
+
+    & h3 {
+      padding-top: 38px;
+      padding-bottom: 22px;
+      font-size: 36px;
+      line-height: 44px;
+    }
+  }
+
+  .modal-tarif__inner-wrapper {
+    margin-bottom: 40px;
+  }
+
+  .modal-tarif__icon-bg img {
+    width: 100%;
+  }
+
+  .icon-bg__list {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .icon-bg__item {
+    padding-left: 24px;
+
+    &::before {
+      width: 14px;
+      height: 10px;
+    }
+  }
+
+  .modal-tarif__chanel {
+    margin-top: 18px;
+  }
+
+  .modal-tarif__chanel, .modal-tarif__speed {
+    padding-left: 45px;
+    margin-bottom: 40px;
+
+    font-size: 28px;
+    line-height: 34px;
+
+    & span {
+      font-size: 45px;
+      line-height: 54px;
+    }
+
+    &::before {
+      top: 50%;
+
+      margin-top: -15px;
+
+      width: 31px;
+      height: 30px;
+    }
+  }
+
+  .modal-tarif__description {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .modal-tarif__cashback, .modal-tarif__points, .modal-tarif__total {
+    font-size: 30px;
+    line-height: 36px;
+    padding-top: 13px;
+    padding-bottom: 17px;
+
+    & span {
+      font-size: 40px;
+      line-height: 48px;
+    }
+
+    &::before {
+      top: 50%;
+      left: 25px;
+
+      margin-top: -20px;
+
+      height: 32px;
+      width: 37px;
+    }
+  }
+
+
+  .modal-tarif__close {
+    top: 15px;
+    right: 18px;
+  }
 }
