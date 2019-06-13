@@ -1306,7 +1306,9 @@ td.speed-up__description {
     width: 1.2rem;
     min-height: 1.03rem;
     background-repeat: no-repeat;
-    background-position: center; }
+    background-position: center;
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat; }
 
 .modal-tarif__total {
   color: white;
