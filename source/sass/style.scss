@@ -742,7 +742,6 @@ input[type="radio"].visually-hidden {
     }
   }
 
-
   .block__description {
     padding: 25px;
 
@@ -1553,7 +1552,8 @@ td.speed-up__description {
 
     background-repeat: no-repeat;
     background-position: center;
-    mask-repeat: no-repeat; }
+    mask-repeat: no-repeat;
+  }
 }
 
 .modal-tarif__total {
@@ -1583,7 +1583,7 @@ td.speed-up__description {
   background-color: #d1d3d4;
 
   &::before {
-    background-color: #58595B;
+    background-color: #58595b;
     mask-image: url(../img/svg/pig-icon.svg);
     // background-image: url(../img/svg/pig-icon.svg);
   }
@@ -1718,7 +1718,8 @@ td.speed-up__description {
     margin-top: 18px;
   }
 
-  .modal-tarif__chanel, .modal-tarif__speed {
+  .modal-tarif__chanel,
+  .modal-tarif__speed {
     padding-left: 45px;
     margin-bottom: 40px;
 
@@ -1745,7 +1746,9 @@ td.speed-up__description {
     line-height: 22px;
   }
 
-  .modal-tarif__cashback, .modal-tarif__points, .modal-tarif__total {
+  .modal-tarif__cashback,
+  .modal-tarif__points,
+  .modal-tarif__total {
     font-size: 30px;
     line-height: 36px;
     padding-top: 13px;
@@ -1767,6 +1770,15 @@ td.speed-up__description {
     }
   }
 
+  .modal-tarif__points {
+    font-size: 21px;
+    line-height: 25px;
+
+    & span {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
 
   .modal-tarif__close {
     top: 15px;

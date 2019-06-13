@@ -1327,7 +1327,7 @@ td.speed-up__description {
   color: #58595b;
   background-color: #d1d3d4; }
   .modal-tarif__points::before {
-    background-color: #58595B;
+    background-color: #58595b;
     -webkit-mask-image: url(../img/svg/pig-icon.svg);
             mask-image: url(../img/svg/pig-icon.svg); }
   .modal-tarif__points:hover, .modal-tarif__points:focus {
@@ -1410,15 +1410,18 @@ td.speed-up__description {
       height: 10px; }
   .modal-tarif__chanel {
     margin-top: 18px; }
-  .modal-tarif__chanel, .modal-tarif__speed {
+  .modal-tarif__chanel,
+  .modal-tarif__speed {
     padding-left: 45px;
     margin-bottom: 40px;
     font-size: 28px;
     line-height: 34px; }
-    .modal-tarif__chanel span, .modal-tarif__speed span {
+    .modal-tarif__chanel span,
+    .modal-tarif__speed span {
       font-size: 45px;
       line-height: 54px; }
-    .modal-tarif__chanel::before, .modal-tarif__speed::before {
+    .modal-tarif__chanel::before,
+    .modal-tarif__speed::before {
       top: 50%;
       margin-top: -15px;
       width: 31px;
@@ -1426,20 +1429,32 @@ td.speed-up__description {
   .modal-tarif__description {
     font-size: 18px;
     line-height: 22px; }
-  .modal-tarif__cashback, .modal-tarif__points, .modal-tarif__total {
+  .modal-tarif__cashback,
+  .modal-tarif__points,
+  .modal-tarif__total {
     font-size: 30px;
     line-height: 36px;
     padding-top: 13px;
     padding-bottom: 17px; }
-    .modal-tarif__cashback span, .modal-tarif__points span, .modal-tarif__total span {
+    .modal-tarif__cashback span,
+    .modal-tarif__points span,
+    .modal-tarif__total span {
       font-size: 40px;
       line-height: 48px; }
-    .modal-tarif__cashback::before, .modal-tarif__points::before, .modal-tarif__total::before {
+    .modal-tarif__cashback::before,
+    .modal-tarif__points::before,
+    .modal-tarif__total::before {
       top: 50%;
       left: 25px;
       margin-top: -20px;
       height: 32px;
       width: 37px; }
+  .modal-tarif__points {
+    font-size: 21px;
+    line-height: 25px; }
+    .modal-tarif__points span {
+      font-size: 30px;
+      line-height: 36px; }
   .modal-tarif__close {
     top: 15px;
     right: 18px; } }
